@@ -1,0 +1,26 @@
+﻿@using System.Reflection;
+@using Entities;
+@model List<ProductDto>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Products</h2>
+
+<table class="table table-bordered table-responsive table-hover">
+    <tr>
+        @foreach (PropertyInfo property in Model.First().GetType().GetProperties())
+        {
+            <th>@property.Name</th>
+        }
+    </tr>
+    @foreach (ProductDto productDto in Model)
+    {
+    <tr>
+        <td>@productDto.ID</td>
+        <td>@productDto.Name</td>
+        <td>@productDto.Description</td>
+        <td>@productDto.Price</td>
+    </tr>
+    }
+</table>  
