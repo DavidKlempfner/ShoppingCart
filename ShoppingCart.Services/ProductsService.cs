@@ -11,12 +11,15 @@ using System.Threading.Tasks;
 namespace ShoppingCart.Services
 {
     public class ProductsService : IProductsService
-    {                
-        public List<ProductDto> GetProductsFromEndpoint(string productsApiUrl)
+    {
+        private IRestClient _restClient;
+        public ProductsService(IRestClient restClient)
         {
-            RestClient client = new RestClient(productsApiUrl);
-
-            IRestResponse response = client.Execute(new RestRequest());
+            _restClient = restClient;
+        }
+        public List<ProductDto> GetProductsFromEndpoint()
+        {
+            IRestResponse response = _restClient.Execute(new RestRequest());
             var products = JsonConvert.DeserializeObject<List<ProductDto>>(response.Content);
             return products;
         }

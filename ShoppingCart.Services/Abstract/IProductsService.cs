@@ -9,6 +9,6 @@ namespace ShoppingCart.Services.Abstract
 {
     public interface IProductsService
     {
-        List<ProductDto> GetProductsFromEndpoint(string productsApiUrl);
+        List<ProductDto> GetProductsFromEndpoint();
     }
 }

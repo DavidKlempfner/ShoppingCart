@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 
 [TestFixture]
-public class ShoppingCartApiNUnitTests
+public class ShoppingCartApiTests
 {
     [Test]
     public void WhenProductsAreRetrievedExpectNonNullResult()

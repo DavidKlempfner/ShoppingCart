@@ -20,3 +20,5 @@ DataAccess/bin/
 DataAccessTests/bin/
 DataAccessTests/obj/
 Entities/obj/
+ShoppingCart.Services.Tests/obj/
+ShoppingCart.Services.Tests/bin/

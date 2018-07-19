@@ -9,7 +9,7 @@ using System.Linq;
 namespace ShoppingCart.API.Services.Tests
 {
     [TestFixture]
-    public class ServicesNUnitTests
+    public class ShoppingCartApiServicesTests
     {
         [Test]
         public void WhenProductsAreRetrievedExpectCorrectlyMappedProducts()

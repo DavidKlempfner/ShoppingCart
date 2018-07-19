@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace ShoppingCart.API.DataAccess.Tests
 {
     [TestFixture]
-    public class DataAccessTests
+    public class ShoppingCartApiDataAccessTests
     {
         [Test]
         public void WhenGetProductsIsCalledExpectListOfProduct()

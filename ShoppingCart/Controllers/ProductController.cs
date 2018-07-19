@@ -19,8 +19,7 @@ namespace ShoppingCart.Controllers
         
         public ActionResult Index()
         {
-            string productsApiUrl = ConfigurationManager.AppSettings["ProductsApiUrl"];
-            List<ProductDto> products = _productsService.GetProductsFromEndpoint(productsApiUrl);
+            List<ProductDto> products = _productsService.GetProductsFromEndpoint();
             return View(products);
         }
     }
