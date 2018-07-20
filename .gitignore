@@ -1,5 +1,4 @@
 .vs/
-packages/
 ShoppingCart.API/obj/
 ShoppingCart.API/bin/
 ShoppingCart.Services/obj/
