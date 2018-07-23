@@ -8,18 +8,18 @@ namespace ShoppingCart.API.DataAccess.Tests
     [TestFixture]
     public class ShoppingCartApiDataAccessTests
     {
-        //[Test]
-        //public void WhenGetProductsIsCalledExpectListOfProduct()
-        //{
-        //    //Arrange
-        //    ProductsRepository productsRepository = new ProductsRepository();
+        [Test]
+        public void WhenGetProductsIsCalledExpectListOfProduct()
+        {
+            //Arrange
+            ProductsRepository productsRepository = new ProductsRepository();
 
-        //    //Act
-        //    List<Product> products = productsRepository.GetProducts();
+            //Act
+            List<Product> products = productsRepository.GetProducts();
 
-        //    //Assert
-        //    Assert.IsNotNull(products);
-        //    Assert.IsTrue(products.Count > 0);            
-        //}
+            //Assert
+            Assert.IsNotNull(products);
+            Assert.IsTrue(products.Count > 0);
+        }
     }
 }
