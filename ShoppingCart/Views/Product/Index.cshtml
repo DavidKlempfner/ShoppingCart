@@ -1,4 +1,4 @@
-﻿@using System.Reflection;
+﻿﻿@using System.Reflection;
 @using Entities;
 @model List<ProductDto>
 @{
@@ -16,11 +16,11 @@
     </tr>
     @foreach (ProductDto productDto in Model)
     {
-    <tr>
-        <td>@productDto.ID</td>
-        <td>@productDto.Name</td>
-        <td>@productDto.Description</td>
-        <td>@productDto.Price</td>
-    </tr>
+        <tr>
+            <td>@productDto.ID</td>
+            <td>@productDto.Name</td>
+            <td>@productDto.Description</td>
+            <td>@productDto.Price</td>
+        </tr>
     }
 </table>  

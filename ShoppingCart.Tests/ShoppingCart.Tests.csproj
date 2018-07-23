@@ -97,7 +97,7 @@
       <Name>ShoppingCart.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\ShoppingCart\ShoppingCart.csproj">
-      <Project>{C2411B99-B99B-47C6-B62F-26E3BDB7CA3F}</Project>
+      <Project>{23b8597a-709f-47a4-ac5e-511eabbacd0c}</Project>
       <Name>ShoppingCart</Name>
     </ProjectReference>
   </ItemGroup>

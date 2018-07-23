@@ -104,7 +104,7 @@
       <Name>ShoppingCart.API.Services</Name>
     </ProjectReference>
     <ProjectReference Include="..\ShoppingCart.API\ShoppingCart.API.csproj">
-      <Project>{05B85950-363F-4BFE-BF1E-94F5BD5C613B}</Project>
+      <Project>{05b85950-363f-4bfe-bf1e-94f5bd5c613b}</Project>
       <Name>ShoppingCart.API</Name>
     </ProjectReference>
   </ItemGroup>

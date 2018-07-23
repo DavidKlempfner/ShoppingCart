@@ -1,11 +1,10 @@
-﻿using System;
+﻿using Entities;
+using ShoppingCart.Services.Abstract;
+using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using Entities;
-using ShoppingCart.Services.Abstract;
 
 namespace ShoppingCart.Controllers
 {
@@ -16,7 +15,7 @@ namespace ShoppingCart.Controllers
         {
             _productsService = productsService;
         }
-        
+
         public ActionResult Index()
         {
             List<ProductDto> products = _productsService.GetProductsFromEndpoint();
