@@ -5,34 +5,43 @@ using Entities;
 using Moq;
 using NUnit.Framework;
 using System.Linq;
+using AutoMapper;
 
 namespace ShoppingCart.API.Services.Tests
 {
     [TestFixture]
     public class ShoppingCartApiServicesTests
     {
-        //[Test]
-        //public void WhenProductsAreRetrievedExpectCorrectlyMappedProducts()
-        //{
-        //    //Arrange            
-        //    List<Product> products = new List<Product>()
-        //    {
-        //        new Product { ID = 1, Name = "Name1", Description = "desc1", Price = 1.1M },
-        //        new Product { ID = 2, Name = "Name2", Description = "desc2", Price = 2.2M }
-        //    };
-        //    Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
-        //    mock.Setup(m => m.GetProducts()).Returns(products);
+        public ShoppingCartApiServicesTests()
+        {
+            Mapper.Initialize(cfg =>
+            {
+                cfg.CreateMap<Product, ProductDto>();
+            });
+        }
 
-        //    ProductsApiService productsService = new ProductsApiService(mock.Object);
+        [Test]
+        public void WhenProductsAreRetrievedExpectCorrectlyMappedProducts()
+        {
+            //Arrange            
+            List<Product> products = new List<Product>()
+            {
+                new Product { ID = 1, Name = "Name1", Description = "desc1", Price = 1.1M },
+                new Product { ID = 2, Name = "Name2", Description = "desc2", Price = 2.2M }
+            };
+            Mock<IProductsRepository> mock = new Mock<IProductsRepository>();
+            mock.Setup(m => m.GetProducts()).Returns(products);
 
-        //    //Act
-        //    List<ProductDto> productDtos = productsService.GetProducts();
+            ProductsApiService productsService = new ProductsApiService(mock.Object);
 
-        //    //Assert
-        //    Assert.IsNotNull(productDtos);
-        //    Assert.IsNotEmpty(productDtos);
-        //    Assert.IsTrue(productDtos.Count == products.Count);
-        //    Assert.IsTrue(productDtos.First().ID == products.First().ID);
-        //}
+            //Act
+            List<ProductDto> productDtos = productsService.GetProducts();
+
+            //Assert
+            Assert.IsNotNull(productDtos);
+            Assert.IsNotEmpty(productDtos);
+            Assert.IsTrue(productDtos.Count == products.Count);
+            Assert.IsTrue(productDtos.First().ID == products.First().ID);
+        }
     }
 }
